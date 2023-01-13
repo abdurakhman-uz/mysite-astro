@@ -31,20 +31,25 @@ const posts = (await Astro.glob('./news/*.{md,mdx}')).sort(
 
 <style>
     main {
-        width: 400px;
+        display: flex;
+        max-width: 300px;
         margin-left: auto;
         margin-right: auto;
 		padding-top: 25px;
     }
     .grid-system {
         /* width: 300px; */
+        margin: 0;
+        padding: 0;
     }
     .grids {
-        width: 300px;
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
-        border: 2px solid #000;
+        /* border: 2px solid #000; */
         border-radius: 10px;
         margin-bottom: 20px;
         padding: 10px;
@@ -70,7 +75,7 @@ const posts = (await Astro.glob('./news/*.{md,mdx}')).sort(
 	}
 	.grids:is(:hover, :focus-within) {
 		background-color: rgb(var(--accent));
-        border: 2px solid #fff;
+        /* border: 2px solid #fff; */
         color: #fff;
 	}
     .grids:is(:hover, :focus-within) a {
