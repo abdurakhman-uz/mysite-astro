@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<Layout title="News">
+    <main>
+        <section>
+            <ul class="grid-system">
+                {
+                    posts.map((post) => (
+                        <li class="grids">
+                            <time datetime={post.frontmatter.pubDate}>
+                                {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric',
+                                })}
+                            </time>
+                            <a href={post.url}>{post.frontmatter.title}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    main {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+		padding-top: 25px;
+    }
+    .grid-system {
+        /* width: 300px; */
+    }
+    .grids {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+
+        background-color: white;
+		background-image: var(--accent-gradient);
+		background-size: 400%;
+		border-radius: 0.5rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .grids time {
+        font-size: 15px;
+    }
+    .grids a {
+        font-size: 24px;
+    }
+
+    .grids:is(:hover, :focus-within) {
+		background-position: 0;
+	}
+	.grids:is(:hover, :focus-within) {
+		background-color: rgb(var(--accent));
+        border: 2px solid #fff;
+        color: #fff;
+	}
+    .grids:is(:hover, :focus-within) a {
+        color: #fff;
+	}
+</style>

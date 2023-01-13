@@ -1,0 +1,30 @@
+<ul>
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li>
+        <a href="/about">About</a>
+    </li>
+    <li>
+        <a href="/news">Blog</a>
+    </li>
+</ul>
+
+<style>
+    ul {
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    li {
+        width: 80px;
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    a:is(:hover, :focus-within) {
+		color: rgb(var(--accent));
+	}
+</style>
