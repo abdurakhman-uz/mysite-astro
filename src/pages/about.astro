@@ -12,32 +12,10 @@ import Card from '../components/Card.astro';
         </p>
 
         <ul class="links-about grid">
-            <!-- <Card 
-                title="GitHub"
-                body=""
-                href="#"
-            />
-            <Card 
-                title="Telegram"
-                body=""
-                href="#"
-            />
-            <Card 
-                title="Instagram"
-                body=""
-                href="#"
-            />
-            <Card 
-                title="Matrix"
-                body=""
-                href="#"
-            /> -->
-
-
-            <li class="linkss" ><a href="#">Matrix</a></li>
-            <li class="linkss" ><a href="#">Telegram</a></li>
-            <li class="linkss" ><a href="#">Instagram</a></li>
-            <li class="linkss" ><a href="#">GitHub</a></li>
+            <li class="linkss"><a href="#">Matrix</a></li>
+            <li class="linkss"><a href="#">Telegram</a></li>
+            <li class="linkss"><a href="#">Instagram</a></li>
+            <li class="linkss"><a href="#">GitHub</a></li>
         </ul>
     </main>
 </Layout>
@@ -48,10 +26,12 @@ import Card from '../components/Card.astro';
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 700px;
+        min-width: 300px;
 	}
 
     p {
         max-width: 700px;
+        min-width: 300px;
         margin-top: 100px;
         text-align: center;
         margin-left: auto;
@@ -62,7 +42,7 @@ import Card from '../components/Card.astro';
     }
 
     li {
-        padding: 5px;
+        padding: 10px;
         text-align: center;
         /* border: 2px solid #000; */
         border-radius: 10px;

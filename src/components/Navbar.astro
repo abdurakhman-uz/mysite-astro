@@ -1,14 +1,9 @@
 <div class="navbar-wrapper">
     <ul>
-        <li class="navbar-links">
-            <a href="/">Home</a>
-        </li>
-        <li class="navbar-links">
-            <a href="/about">About</a>
-        </li>
-        <li class="navbar-links">
-            <a href="/news">Blog</a>
-        </li>
+        <li class="navbar-links"><a href="/">Home</a></li>
+        <li class="navbar-links"><a href="/projects">Projects</a></li>
+        <li class="navbar-links"><a href="/about">About</a></li>
+        <li class="navbar-links"><a href="/news">Blog</a></li>
     </ul>
 </div>
 
@@ -18,21 +13,25 @@
         justify-content: space-evenly;
         padding: 0;
         max-width: 100vw;
+        min-width: 300px;
     }
     ul {
-        padding: 0;
-        max-width: 300px;
+        max-width: 500px;
+        min-width: 300px;
         display: flex;
         justify-content: space-evenly;
     }
     .navbar-links {
         width: 80px;
+        height: 30px;
         margin: 0 10px;
-        padding: 5px;
+        padding: 8px 0px 0px 0px;
         text-align: center;
         list-style-type: none;
     }
     a {
+        /* width: 80px; */
+        /* height: 40px; */
         text-decoration: none;
         color: #000;
     }
