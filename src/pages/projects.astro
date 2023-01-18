@@ -1,7 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Cards from "../components/Cards.astro";
 ---
 
 <Layout title="Projects">
+    <main>
+        <ul>
+            <Cards
+            img="/favicon.svg"
+            img="/placeholder-social.jpg"
+            href="/404"
+            title="AutoDevices"
+            body="AutoDevices site with beckend"
+	    />
 
+        <Cards
+            img="/favicon.svg"
+            img="/placeholder-social.jpg"
+            href="/404"
+            title="Project"
+            body="Project"
+	    />
+        </ul>
+    </main>
 </Layout>
+
+<style>
+    main {
+        max-width: 500px;
+        min-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+</style>

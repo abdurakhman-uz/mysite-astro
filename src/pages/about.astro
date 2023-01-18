@@ -4,10 +4,10 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="About">
     <main>
-        <p>
+        <p class="about-text">
             Hi, I'm Abdurakhman Abduazimov. Studying on Najot Ta'lim.
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, beatae! Ut labore omnis veritatis vero reprehenderit obcaecati eaque, beatae alias ea natus libero debitis perspiciatis voluptatem explicabo ipsum voluptatum quod perferendis minima id voluptate maiores quibusdam in. Impedit perferendis atque iusto, odit consequatur fuga quas similique incidunt tempora adipisci! Obcaecati aut quaerat est, delectus et itaque tempora qui veniam quasi placeat, neque magni, quo nulla repellat. Repellat, error aut. Velit sit corrupti laborum excepturi dolore, incidunt natus ut deserunt voluptate nobis aliquam consequuntur vel perferendis eveniet sint porro esse ad possimus ullam ex atque dignissimos fugit quibusdam! Facilis, exercitationem dolore.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis odio unde eius dolore commodi perspiciatis, sed officiis, voluptatem incidunt voluptate similique! Consectetur qui repellendus est, ad exercitationem quos eaque eius esse, illo provident fugiat veniam dignissimos aut repellat perspiciatis cum inventore, voluptates accusamus vel! Ratione libero repellat nisi quasi non. Aliquid veniam et recusandae nisi aspernatur minima officiis repellat! Laborum, sint sapiente nisi consectetur, adipisci quis velit aliquam dolorem maiores itaque nostrum possimus! Quibusdam explicabo atque voluptatem consectetur doloremque soluta libero voluptate, tempora natus dignissimos exercitationem fugit saepe facilis ea ullam vel, possimus voluptas accusamus quidem dolores aliquid. Ipsam, dicta.            
         </p>
 
         <ul class="links-about grid">
@@ -16,6 +16,7 @@ import Layout from '../layouts/Layout.astro';
             <li class="linkss"><a href="#">Instagram</a></li>
             <li class="linkss"><a href="#">GitHub</a></li>
         </ul>
+        <p class="builted">This site builted with Astro</p>
     </main>
 </Layout>
 
@@ -23,12 +24,11 @@ import Layout from '../layouts/Layout.astro';
 
     main {
 		margin: auto;
-		/* padding: 1.5rem; */
 		max-width: 700px;
         min-width: 300px;
 	}
 
-    p {
+    .about-text {
         max-width: 700px;
         min-width: 300px;
         margin-top: 100px;
@@ -40,22 +40,22 @@ import Layout from '../layouts/Layout.astro';
         font-size: 22px;
     }
 
+    .builted {
+        min-width: 300px;
+        margin-top: 130px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'monospace';
+        font-size: 22px;
+        color: #c6c6c6;
+    }
+
     li {
         padding: 10px;
         text-align: center;
-        /* border: 2px solid #000; */
         border-radius: 10px;
     }
-
-    /* .links-about {
-        width: 400px;
-        margin-bottom: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-evenly;
-    } */
 
     .links-about {
         max-width: 60ch;
@@ -79,7 +79,6 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.linkss:is(:hover, :focus-within) {
 		background-color: rgb(var(--accent));
-        /* border: 2px solid #fff; */
         color: #fff;
 	}
     .linkss:is(:hover, :focus-within) a {
